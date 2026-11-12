@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parameters>
+  <param_references/>
+  <param id="Sender_Path" isRequired="true" allowedValues="" description="Caminho do endpoint HTTPS do iFlow (apos /http)" isHidden="false">
+    <type>xsd:string</type>
+    <value>/consulta-cliente</value>
+  </param>
+  <param id="Required_Params" isRequired="false" allowedValues="" description="Parametros de query obrigatorios, separados por virgula" isHidden="false">
+    <type>xsd:string</type>
+    <value>customerId</value>
+  </param>
+  <param id="Externo_URL" isRequired="true" allowedValues="" description="URL base da API externa de clientes (ex.: https://api.exemplo.com/v1)" isHidden="false">
+    <type>xsd:string</type>
+    <value>https://api.exemplo.com/v1</value>
+  </param>
+  <param id="Externo_Credential" isRequired="true" allowedValues="" description="Nome da credencial User Credentials cadastrada em Security Material" isHidden="false">
+    <type>xsd:string</type>
+    <value>CRED_API_EXEMPLO</value>
+  </param>
+  <param id="Request_Timeout" isRequired="false" allowedValues="" description="Timeout da chamada a API externa, em milissegundos" isHidden="false">
+    <type>xsd:integer</type>
+    <value>60000</value>
+  </param>
+</parameters>

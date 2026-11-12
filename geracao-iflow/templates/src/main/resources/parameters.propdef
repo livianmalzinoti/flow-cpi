@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<parameters>
+  <param_references/>
+  <param id="Sender_Path" isRequired="true" allowedValues="" description="Caminho do endpoint HTTPS do iFlow (apos /http)" isHidden="false">
+    <type>xsd:string</type>
+    <value>/__IFLOW_ID__</value>
+  </param>
+  <param id="Request_Timeout" isRequired="false" allowedValues="" description="Timeout das chamadas ao receiver, em milissegundos" isHidden="false">
+    <type>xsd:integer</type>
+    <value>60000</value>
+  </param>
+</parameters>

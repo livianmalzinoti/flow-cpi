@@ -1,0 +1,6 @@
+#Wed Oct 22 00:00:00 UTC 2026
+Sender_Path=/consulta-cliente
+Required_Params=customerId
+Externo_URL=https\://api.exemplo.com/v1
+Externo_Credential=CRED_API_EXEMPLO
+Request_Timeout=60000

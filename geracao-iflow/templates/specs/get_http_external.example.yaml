@@ -1,0 +1,43 @@
+# Exemplo mínimo — padrão A (GET query params → HTTP receiver → JSON)
+# Preferir o .json irmão se PyYAML não estiver instalado.
+#   python scripts/generate_iflow.py --spec templates/specs/get_http_external.example.json --force
+
+id: IF_Consulta_CEP
+name: IF Consulta CEP
+description: Consulta CEP em API externa via query param
+out: ./out_iflows
+pattern: get_http_external
+required_params: [cep]
+
+sender:
+  path_default: /cep
+  url_path: "{{Sender_Path}}"
+
+receiver:
+  name: ViaCEP
+  address: "{{Externo_URL}}/ws/${property.qp_cep}/json"
+  query: ""
+  method: GET
+  auth: None
+  credential: ""
+  timeout: "{{Request_Timeout}}"
+  url_default: https://viacep.com.br
+  timeout_default: "60000"
+
+parameters:
+  - id: Sender_Path
+    type: string
+    value: /cep
+    description: Caminho do endpoint HTTPS do iFlow (apos /http)
+  - id: Required_Params
+    type: string
+    value: cep
+    description: Parametros de query obrigatorios, separados por virgula
+  - id: Externo_URL
+    type: string
+    value: https://viacep.com.br
+    description: URL base da API externa
+  - id: Request_Timeout
+    type: integer
+    value: "60000"
+    description: Timeout da chamada em milissegundos
